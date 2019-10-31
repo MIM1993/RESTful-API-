@@ -1,6 +1,81 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"path": "APISERVER",
+			"revision": "cdf7ed068d23696111538c283c146a1c1a14328c",
+			"revisionTime": "2019-10-31T07:22:10Z"
+		},
+		{
+			"path": "APISERVER/handler/sd",
+			"revision": "cdf7ed068d23696111538c283c146a1c1a14328c",
+			"revisionTime": "2019-10-31T07:22:10Z"
+		},
+		{
+			"path": "APISERVER/router",
+			"revision": "cdf7ed068d23696111538c283c146a1c1a14328c",
+			"revisionTime": "2019-10-31T07:22:10Z"
+		},
+		{
+			"path": "APISERVER/router/middleware",
+			"revision": "cdf7ed068d23696111538c283c146a1c1a14328c",
+			"revisionTime": "2019-10-31T07:22:10Z"
+		},
+		{
+			"path": "github.com/gin-contrib/sse",
+			"revision": ""
+		},
+		{
+			"path": "github.com/gin-gonic/gin",
+			"revision": ""
+		},
+		{
+			"path": "github.com/gin-gonic/gin/binding",
+			"revision": ""
+		},
+		{
+			"path": "github.com/gin-gonic/gin/internal/json",
+			"revision": ""
+		},
+		{
+			"path": "github.com/gin-gonic/gin/render",
+			"revision": ""
+		},
+		{
+			"path": "github.com/gopsutil/cpu",
+			"revision": ""
+		},
+		{
+			"path": "github.com/gopsutil/disk",
+			"revision": ""
+		},
+		{
+			"path": "github.com/gopsutil/load",
+			"revision": ""
+		},
+		{
+			"path": "github.com/gopsutil/mem",
+			"revision": ""
+		},
+		{
+			"path": "golang.org/x/sys/unix",
+			"revision": "f43be2a4598cf3a47be9f94f0c28197ed9eae611",
+			"revisionTime": "2019-10-29T08:55:52Z"
+		},
+		{
+			"path": "golang.org/x/sys/windows",
+			"revision": "f43be2a4598cf3a47be9f94f0c28197ed9eae611",
+			"revisionTime": "2019-10-29T08:55:52Z"
+		},
+		{
+			"path": "gopkg.in/go-playground/validator.v8",
+			"revision": ""
+		},
+		{
+			"path": "gopkg.in/yaml.v2",
+			"revision": ""
+		}
+	],
 	"rootPath": "APISERVER"
 }

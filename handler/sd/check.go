@@ -3,10 +3,10 @@ package sd
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/gopsutil/cpu"
-	"github.com/gopsutil/disk"
-	"github.com/gopsutil/load"
-	"github.com/gopsutil/mem"
+	"github.com/shirou/gopsutil/cpu"
+	"github.com/shirou/gopsutil/disk"
+	"github.com/shirou/gopsutil/load"
+	"github.com/shirou/gopsutil/mem"
 	"log"
 	"net/http"
 )
@@ -21,7 +21,7 @@ const (
 //health check show 'ok' as the ping-pong result
 func HealthCheck(c *gin.Context) {
 	message := "OK"
-	c.String(http.StatusOK, "\n"+message)
+	c.String(http.StatusOK, "\n"+message+"\n")
 }
 
 //DiskCheck check disk usage
@@ -46,7 +46,7 @@ func DeskCheck(c *gin.Context) {
 		text = "WARNING"
 	}
 
-	message := fmt.Sprintf("%s - Free space: %dMB (%dGB) / %dMB (%dGB) | Used: %d%%", text, usedMB, usedGB, totalMB, totalGb)
+	message := fmt.Sprintf("%s - Free space: %dMB (%dGB) / %dMB (%dGB) | Used: %d%%\n", text, usedMB, usedGB, totalMB, totalGb, usedPercent)
 
 	//response
 	c.String(status, "\n"+message)
@@ -75,7 +75,7 @@ func CpuCheck(c *gin.Context) {
 		text = "WARNING"
 	}
 
-	message := fmt.Sprintf("%s - Load average: %2f, %2f ,%2f | cores: %d", text, l1, l5, l15, cores)
+	message := fmt.Sprintf("%s - Load average: %2f, %2f ,%2f | cores: %d\n", text, l1, l5, l15, cores)
 
 	c.String(status, "\n"+message)
 }
@@ -102,7 +102,7 @@ func RAMCheck(c *gin.Context) {
 		text = "WARNNING"
 	}
 
-	message := fmt.Sprintf("%s -Free space: %dMB (%dGB) / %dMB (%dGB) | Used: %d%%", text, usedMB, usedGB, totalMB, totalGb, usedPercent)
+	message := fmt.Sprintf("%s -Free space: %dMB (%dGB) / %dMB (%dGB) | Used: %2f%%\n", text, usedMB, usedGB, totalMB, totalGb, usedPercent)
 
 	c.String(status, "\n"+message)
 }

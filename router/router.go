@@ -26,7 +26,7 @@ func Load(engine *gin.Engine, mw ...gin.HandlerFunc) *gin.Engine {
 	{
 		svcd.GET("/health", sd.HealthCheck)
 		svcd.GET("/disk", sd.DeskCheck)
-		svcd.GET("/cpu", sd.CpuCheck)
+		//svcd.GET("/cpu", sd.CpuCheck)
 		svcd.GET("/ram", sd.RAMCheck)
 	}
 
