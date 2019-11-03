@@ -3,10 +3,10 @@ package sd
 import (
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/gopsutil/cpu"
-	"github.com/gopsutil/disk"
-	"github.com/gopsutil/load"
-	"github.com/gopsutil/mem"
+	"github.com/shirou/gopsutil/cpu"
+	"github.com/shirou/gopsutil/disk"
+	"github.com/shirou/gopsutil/load"
+	"github.com/shirou/gopsutil/mem"
 	"log"
 	"net/http"
 )
